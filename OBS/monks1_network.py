@@ -103,7 +103,7 @@ if __name__ == '__main__':
                 inputs, labels = data
                 labels = labels.unsqueeze(1)
 
-                # set tje gradient zero
+                # set the gradient zero
                 optimizer.zero_grad()
 
                 # forward, backward, optimize
