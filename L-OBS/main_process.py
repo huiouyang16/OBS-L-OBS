@@ -35,7 +35,7 @@ class N(nn.Module):
 
 
 n = N()
-n.load_state_dict(torch.load('params.pkl'))
+n.load_state_dict(torch.load('params_lenet_300_100.pkl'))
 para = list(n.parameters())
 w_input_layer = para[0].detach().numpy()
 b_input_layer = para[1].detach().numpy()
@@ -194,11 +194,11 @@ b_hidden_layer_cut = torch.tensor(b_hidden_layer_cut)
 w_output_layer_cut = torch.tensor(w_output_layer_cut)
 b_output_layer_cut = torch.tensor(b_output_layer_cut)
 
-p = torch.load('params.pkl')
+p = torch.load('params_lenet_300_100.pkl')
 p['input_layer.weight'] = w_input_layer_cut
 p['input_layer.bias'] = b_input_layer_cut
 p['hidden_layer.weight'] = w_hidden_layer_cut
 p['hidden_layer.bias'] = b_hidden_layer_cut
 p['output_layer.weight'] = w_output_layer_cut
 p['output_layer.bias'] = b_output_layer_cut
-torch.save(p, 'pruned2.pkl')
+torch.save(p, 'params_lenet_300_100_pruned.pkl')

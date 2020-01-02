@@ -64,4 +64,4 @@ for epoch in range(num_epochs):
 
 para = list(net.parameters())
 print(para)
-torch.save(net.state_dict(), 'params.pkl')
+torch.save(net.state_dict(), 'params_lenet_300_100.pkl')

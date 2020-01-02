@@ -28,7 +28,7 @@ class N(nn.Module):
 
 
 n = N()
-n.load_state_dict(torch.load('pruned2.pkl'))
+n.load_state_dict(torch.load('params_lenet_300_100_pruned.pkl'))
 
 with torch.no_grad():
     correct = 0
